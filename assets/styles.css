@@ -1,0 +1,37 @@
+/* assets/styles.css */
+a {
+    color: #ADD8E6;  /* Light blue */
+}
+
+a:hover {
+    color: #00BFFF;  /* DeepSkyBlue */
+}
+
+#navbar.navbar {
+    background-color: #000000; /* Set navbar background to black */
+    justify-content: center; /* Center the navbar components */
+}
+
+#navbar.navbar .nav-link {
+    color: #3dc1f9; /* Set button text color to light blue */
+    font-family: Arial, sans-serif;
+    font-size: large; 
+    margin-left: 170px;
+    margin-right: 0px; /* Set the font to Arial or sans-serif if Arial is not available */
+}
+
+
+#navbar.navbar .nav-link:hover {
+    color: #00FFFF; /* Set button text color to light blue when hovered */
+}
+
+img {
+    margin-left: 170px;
+    margin-right: 100px;
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
