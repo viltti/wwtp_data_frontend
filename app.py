@@ -3,11 +3,13 @@ from dash import dcc, html
 import dash_bootstrap_components as dbc
 from dash.dependencies import Input, Output
 import pandas as pd
+import os
 
 from layouts import home_layout, create_features_layout, create_variable_graph, overview_layout
 from services import get_variable_names, get_variable_data, get_history_data
 
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.CYBORG], suppress_callback_exceptions=True)
+server = app.server
 
 navbar = dbc.Navbar(
     [
@@ -64,5 +66,6 @@ def display_page(pathname):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
+    port = int(os.environ.get('PORT', 4000))
+    app.run(host='0.0.0.0', port=port, debug=False)
 
